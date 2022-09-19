@@ -1,1 +1,1 @@
-# Minecraft-Mod
+# Culinary Minecraft Mod
