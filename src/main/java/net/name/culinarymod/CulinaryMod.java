@@ -18,7 +18,7 @@ public class CulinaryMod
     private static final Logger LOGGER = LogUtils.getLogger();
     public CulinaryMod()
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
