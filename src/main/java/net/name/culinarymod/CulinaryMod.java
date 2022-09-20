@@ -19,7 +19,7 @@ public class CulinaryMod
     private static final Logger LOGGER = LogUtils.getLogger();
     public CulinaryMod()
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
 
