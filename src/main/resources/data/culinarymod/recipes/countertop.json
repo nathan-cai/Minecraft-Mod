@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "tag": "culinarymod:countertop"
+    },
+    "#": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "culinarymod:countertop",
+    "count": 5
+  }
+}
