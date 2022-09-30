@@ -1,6 +1,8 @@
 {
   "item.culinarymod.seedoil" : "Seed Oil",
 
+  "item.culinarymod.beefslab" : "Slab of Beef",
+
   "block.culinarymod.countertop" : "Counter Top",
 
   "itemGroup.culinarytab": "Culinary Tab"
