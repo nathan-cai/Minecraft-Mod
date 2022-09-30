@@ -21,7 +21,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, CulinaryMod.MOD_ID);
 
     public static final RegistryObject<Block> COUNTERTOP_BLOCK = registerBlock("countertop", () ->
-            new Block(BlockBehaviour.Properties.of(Material.WOOD)), ModCreativeModeTab.CULINARY_TAB);
+            new Block(BlockBehaviour.Properties.of(Material.WOOD).destroyTime(1)), ModCreativeModeTab.CULINARY_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
