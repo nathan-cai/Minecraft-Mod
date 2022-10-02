@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.name.culinarymod.CulinaryMod;
+import net.name.culinarymod.block.custom.OilPressBlock;
 import net.name.culinarymod.item.ModCreativeModeTab;
 import net.name.culinarymod.item.ModItems;
 
@@ -22,6 +23,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> COUNTERTOP_BLOCK = registerBlock("countertop", () ->
             new Block(BlockBehaviour.Properties.of(Material.WOOD)), ModCreativeModeTab.CULINARY_TAB);
+
+    public static final RegistryObject<Block> OIL_PRESS = registerBlock("oil_press", () ->
+            new OilPressBlock(BlockBehaviour.Properties.of(Material.METAL)), ModCreativeModeTab.CULINARY_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

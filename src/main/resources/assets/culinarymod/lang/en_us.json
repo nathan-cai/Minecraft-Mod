@@ -5,5 +5,7 @@
 
   "block.culinarymod.countertop" : "Counter Top",
 
+  "block.culinarymod.oil_press": "Oil Press",
+
   "itemGroup.culinarytab": "Culinary Tab"
 }
