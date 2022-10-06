@@ -1,6 +1,7 @@
 package net.name.culinarymod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -9,7 +10,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.name.culinarymod.block.ModBlocks;
+import net.name.culinarymod.block.entity.ModBlockEntities;
 import net.name.culinarymod.item.ModItems;
+import net.name.culinarymod.screen.ModMenutypes;
+import net.name.culinarymod.screen.OilPressScreen;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -25,10 +29,14 @@ public class CulinaryMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenutypes.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -42,7 +50,7 @@ public class CulinaryMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            MenuScreens.register(ModMenutypes.OIL_PRESS_MENU.get(), OilPressScreen::new);
         }
     }
 }
